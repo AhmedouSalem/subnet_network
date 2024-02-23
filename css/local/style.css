@@ -5,7 +5,11 @@ body {
 
 .topnav {
     overflow: hidden;
+<<<<<<< HEAD
     background-color: rgb(137, 167, 181);
+=======
+    background-color: #333;
+>>>>>>> 44e57f8df75d9eb117dddd07ed87ff8b903eed5e
 }
 
 .topnav a {
@@ -24,7 +28,11 @@ body {
 }
 
 .topnav a.active {
+<<<<<<< HEAD
     background-color: #0439aa;
+=======
+    background-color: #04AA6D;
+>>>>>>> 44e57f8df75d9eb117dddd07ed87ff8b903eed5e
     color: white;
 }
 
@@ -75,7 +83,11 @@ select {
 
 button {
     width: 100%;
+<<<<<<< HEAD
     background-color: #0439aa;
+=======
+    background-color: #4CAF50;
+>>>>>>> 44e57f8df75d9eb117dddd07ed87ff8b903eed5e
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -85,7 +97,11 @@ button {
 }
 
 button:hover {
+<<<<<<< HEAD
     background-color: #0439aa;
+=======
+    background-color: #45a049;
+>>>>>>> 44e57f8df75d9eb117dddd07ed87ff8b903eed5e
 }
 
 #networkForm {
