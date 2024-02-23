@@ -5,7 +5,7 @@ body {
 
 .topnav {
     overflow: hidden;
-    background-color: #333;
+    background-color: rgb(137, 167, 181);
 }
 
 .topnav a {
@@ -24,7 +24,7 @@ body {
 }
 
 .topnav a.active {
-    background-color: #04AA6D;
+    background-color: #0439aa;
     color: white;
 }
 
@@ -75,7 +75,7 @@ select {
 
 button {
     width: 100%;
-    background-color: #4CAF50;
+    background-color: #0439aa;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -85,7 +85,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #0439aa;
 }
 
 #networkForm {

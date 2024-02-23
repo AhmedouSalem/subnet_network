@@ -19,9 +19,9 @@
         </a>
     </div>
 
-    <div style="padding-left:16px">
+    <div style="padding-left:16px; padding-right: 16px;">
         <h2>Subnet network mask</h2>
-        <form id="networkForm">
+        <form id="networkForm" onsubmit="submitForm(); return false;">
             <label for="networkType">Choisissez le type de réseau :</label>
             <select id="networkType" onchange="loadOptions()">
                 <option value="selectMethod" selected>Select method</option>
@@ -44,7 +44,7 @@
             }
         }
     </script>
-    <script src="../js/static/script.js"></script>
+    <script src="../js/local/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 </body>
