@@ -74,6 +74,7 @@ function collectAndProcessData() {
         }
 
         console.log("VLSM Data - IP:", ipAddress, "Subnets:", vlsmData);
+        
 
         // Ajoutez ici la logique pour le cas de VLSM
     }
@@ -121,7 +122,7 @@ function subnettingLogic(userIP, numSubnets) {
 
     // Generate and output subnet details
     generateSubnetDetails(userIP, subnetMask, numSubnets);
-
+    // document.querySelector("#dynamicResult").style.display = 'block'
     // Additional logic or output based on your requirements
 }
 
@@ -203,6 +204,7 @@ function generateSubnetDetails(userIP, subnetMask, numSubnets) {
         subnetDetails.push({
             subnet: i + 1,
             subnetStart,
+            subnetMask: subnetMask,
             usableRange,
             broadcastAddress: subnetEnd
         });
@@ -210,6 +212,7 @@ function generateSubnetDetails(userIP, subnetMask, numSubnets) {
 
     // Output the subnet details
     console.log("Subnet Details:", subnetDetails);
+    fillTable(subnetDetails);
 }
 
 // Function to generate usable address range for a subnet
@@ -248,7 +251,42 @@ function decrementIPAddress(ipAddress) {
 }
 
 
-// Example usage
-// const userIP = "192.168.1.0";
-// const numSubnets = 8;
-// subnettingLogic(userIP, numSubnets);
+// function fillTable(subnetDetails) {
+//     const dataTable = document.getElementById("data");
+
+//     // Réinitialise le contenu du tableau
+//     dataTable.innerHTML = "";
+
+//     // Remplit le tableau avec les données générées
+//     subnetDetails.forEach((subnet) => {
+//         const row = document.createElement("tr");
+//         row.innerHTML = `
+//             <td>${subnet.subnet}</td>
+//             <td>${subnet.subnetMask}</td>
+//             <td>${subnet.subnetStart}</td>
+//             <td>${subnet.usableRange}</td>
+//             <td>${subnet.broadcastAddress}</td>
+//         `;
+//         dataTable.appendChild(row);
+//     });
+
+//     document.querySelector("#networkForm").style.display = "none";
+// }
+
+function fillTable(subnetDetails) {
+    const dataTable = $("#data").DataTable({
+        data: subnetDetails,
+        columns: [
+            { data: "subnet" },
+            { data: "subnetMask" },
+            { data: "subnetStart" },
+            { data: "usableRange" },
+            { data: "broadcastAddress" }
+        ]
+    });
+
+    // Masquer le formulaire de réseau
+    $("#networkForm").hide();
+    // Afficher le résultat
+    $("#data").show();
+}
